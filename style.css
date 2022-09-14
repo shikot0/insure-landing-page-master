@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+}
+body {
+    margin: 0; 
+    overflow-x: hidden;
+} 
+h1,h2,h3 {
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+}
+p, a {
+    font-family: 'Karla'; 
+}
+header {
+    padding: 1% 8%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;  
+} 
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+.header-link {
+    text-decoration: none; 
+    color: hsl(273, 4%, 51%); 
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 1px;  
+}
+.view-plans-button {  
+    color: hsl(270, 9%, 17%);
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 2px solid hsl(270, 9%, 17%); 
+    background: transparent; 
+    letter-spacing: 1px;  
+    font-weight: 400; 
+    padding: 8px 25px;
+    cursor: pointer;  
+    transition: .3s; 
+}
+.view-plans-button:hover {
+    color: white; 
+    background: hsl(270, 9%, 17%);
+}
+#show-menu-button {
+    position: absolute;
+    right: 4%;
+    background: transparent;
+    border: none;  
+    display: none; 
+    cursor: pointer; 
+    z-index: 10;
+}
+#hero-section { 
+    background: hsl(256, 26%, 20%);
+    color: white;  
+    height: 80vh;   
+    padding: 0 0 0 8%;
+    position: relative; 
+}
+#hero-section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%; 
+    width: 44%;      
+    gap: 20px;
+} 
+#background-image-right {
+    position: absolute; 
+    top: 0;  
+    right: -45px;      
+    width: 26%;        
+    aspect-ratio: 436/539;
+    background: url(images/bg-pattern-intro-right-desktop.svg);
+    background-size: contain; 
+    background-repeat: no-repeat;  
+    z-index: 5;
+}
+#background-image-left {
+    position: absolute;
+    bottom: -180px;      
+    left: 0;
+    background: url(images/bg-pattern-intro-left-desktop.svg);
+    width: 12%;   
+    aspect-ratio: 195/504;
+    background-size: contain;  
+    z-index: 5;
+}
+hr {
+    width: 160px;      
+    color: hsl(0, 0%, 98%); 
+}
+#page-heading {
+    font-size: 4.5rem; 
+    line-height: 4.1rem; 
+} 
+#hero-section-text .view-plans-button {
+    border-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 98%);
+}
+#hero-section-text .view-plans-button:hover {
+    background: hsl(0, 0%, 98%); 
+    color: hsl(270, 9%, 17%); 
+}
+#intro-image { 
+    position: absolute; 
+    width: 35%;    
+    height: 100%;  
+    background: url(images/image-intro-desktop.jpg);
+    background-size: cover; 
+    right: 8%; 
+    top: 15%;
+}
+#features-section { 
+    margin: 15% 0 10%;  
+    padding: 0 8%;
+}   
+#features-section h2 {
+    font-size: 3.3rem; 
+    margin: 0 0 5% 0;
+}
+#Features { 
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; 
+}
+.feature {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 14px;
+}
+.feature img {
+    width: 60px; 
+    margin-bottom: 5px;  
+}
+.feature h3 { 
+    font-size: 1.3rem;
+}
+.feature p {
+    color: hsl(273, 4%, 51%);  
+    line-height: 25px; 
+}
+#how-we-work-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 0 8% 10%; 
+    padding: 4%;
+    background: url(images/bg-pattern-how-we-work-desktop.svg),hsl(256, 26%, 20%);
+    background-repeat: no-repeat;
+    background-position: top -50px right;   
+}
+#how-we-work-section h2 {
+    color: white;
+    font-size: 3rem;
+    line-height: 2.9rem;  
+}
+.how-we-work-button {
+    color: white;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 2px solid white;  
+    background: transparent; 
+    letter-spacing: 1px;  
+    font-weight: 400; 
+    padding: 8px 25px;
+    cursor: pointer;  
+    transition: .3s;   
+}
+.how-we-work-button:hover {
+    background: hsl(0, 0%, 98%); 
+    color: hsl(270, 9%, 17%);  
+}
+footer {
+    padding: 2% 8%;
+    background: url(images/bg-pattern-footer-desktop.svg), hsl(0, 0%, 98%);
+    background-repeat: no-repeat; 
+    background-position: top left;
+}
+footer > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 18px 0;  
+    border-bottom: 1px solid hsl(0, 0%, 78%);  
+}
+#social-media {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.social-media-link path{ 
+    transition: .3s;  
+} 
+.social-media-link:hover path {
+    fill: hsl(256, 26%, 20%); 
+}
+#footer-grid {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0 0 20px; 
+    padding: 35px 0 0; 
+}
+#footer-grid div {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+.link-header {
+    text-transform: uppercase; 
+    font-size: .8rem;
+    color: hsl(273, 4%, 51%);  
+    font-weight: 700; 
+    margin: 0 0 15px;
+}
+.footer-link {
+    text-transform: uppercase; 
+    text-decoration: none;
+    color: hsl(256, 26%, 20%);
+    font-weight: 700; 
+    font-size: .8rem;
+}
+.footer-link:hover {
+    text-decoration: underline; 
+}
+@media screen and (max-width: 810px) {
+    header {
+        padding: 1% 4%;  
+    } 
+    nav {
+        gap: 10px; 
+    } 
+    .header-link {
+        font-size: .8rem;
+    }
+    .view-plans-button {  
+        padding: 8px 13px; 
+        font-size: .8rem; 
+    }
+    #hero-section {  
+        padding: 0 0 0 4%;
+        display: flex;
+        justify-content: space-between; 
+    }
+    #background-image-left {
+        bottom: -100px;      
+    }
+    #hero-section-text {
+        height: 100%; 
+        width: 50%;       
+        gap: 20px; 
+    } 
+    #page-heading {
+        font-size: 3rem;  
+        line-height: 3rem;   
+    } 
+    #hero-section-text p {
+        font-size: .8rem;   
+    }
+    #intro-image { 
+        position: static;  
+        width: 40%;     
+        height: 100%;  
+        background: url(images/image-intro-desktop.jpg);
+        background-position: center;
+        background-size: cover;  
+    }
+    #features-section { 
+        margin: 15% 0;  
+        padding: 0 4%;
+    }  
+    #features-section h2 {
+        font-size: 2.4rem;   
+        margin: 0 0 7% 0; 
+    }
+    #Features { 
+        gap: 20px;  
+    }
+    .feature {
+        gap: 14px;
+    }
+    .feature img {
+        width: 50px;  
+    }
+    .feature h3 { 
+        font-size: 1.1rem;  
+    }
+    .feature p {
+        font-size: .9rem;  
+        line-height: 20px; 
+    }
+    #how-we-work-section {
+        margin: 0 4% 15%;  
+        padding: 4%; 
+    }
+    #how-we-work-section h2 {
+        font-size: 2.4rem;
+        line-height: 2.9rem;  
+    }
+    .how-we-work-button {
+        padding: 8px 13px; 
+        font-size: .8rem;   
+    } 
+    footer {
+        padding: 2% 4%;
+        background: url(images/bg-pattern-footer-desktop.svg), hsl(0, 0%, 98%);
+        background-repeat: no-repeat; 
+        background-position: top left;
+    }
+}
+@media screen and (max-width: 520px) {
+    header {
+        padding: 4% 8%;    
+        background: white; 
+    }
+    nav {
+        position: absolute; 
+        top: 5.5%;                    
+        left: 0;
+        z-index: 10; 
+        flex-direction: column; 
+        justify-content: flex-start;  
+        height: 100vh;
+        width: 100%;
+        background: url(images/bg-pattern-mobile-nav.svg),hsl(270, 9%, 17%);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        gap: 20px;  
+        padding: 10%;  
+        transform: translateX(1000px); 
+        opacity: 0;   
+        transition: .2s; 
+    }
+    nav.visible {
+        transform: none; 
+        opacity: 1;
+    }
+    .header-link {
+        color: white;  
+    }
+    .view-plans-button {  
+        color: white;
+        border: 2px solid white; 
+        background: transparent; 
+        letter-spacing: 1px;  
+        font-weight: 400; 
+        padding: 8px 25px;
+        cursor: pointer;  
+        transition: .3s;  
+    }
+    .view-plans-button:hover {
+        background: transparent; 
+    }
+    #show-menu-button { 
+        display: block;  
+    }
+    #hero-section {
+        flex-direction: column-reverse; 
+        height: 120vh;   
+        padding: 0;
+    }
+    #hero-section hr {
+        display: none; 
+    }
+    #hero-section-text {
+        height: 50%; 
+        width: 100%;       
+        gap: 20px; 
+        align-items: center;
+        text-align: center; 
+        padding: 5%; 
+        overflow: hidden;   
+        background: url(images/bg-pattern-intro-left-mobile.svg); 
+        background-repeat: no-repeat;
+        background-position: top left; 
+    } 
+    #background-image-right {
+        position: absolute; 
+        top: 80%;      
+        right: 0;         
+        width: 55%;          
+        aspect-ratio: 436/539;
+        background: url(images/bg-pattern-intro-right-mobile.svg);
+        background-size: contain; 
+        background-repeat: no-repeat;  
+        background-position: right;  
+        z-index: 5;
+    }
+    #background-image-left {
+        display: none;  
+    }
+    #page-heading {
+        font-size: 2.5rem;  
+        line-height: 2.5rem;     
+    } 
+    #hero-section-text p {
+        font-size: .9rem;   
+    }
+    #intro-image {   
+        width: 100%;     
+        height: 50%;  
+        background: url(images/image-intro-mobile.jpg); 
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover;    
+    }
+    #features-section { 
+        margin: 15% 0;  
+        padding: 0;
+    }  
+    #features-section hr {
+        margin: 0 auto;
+    }
+    #features-section h2 {
+        font-size: 2.4rem;   
+        margin: 0 0 7% 0; 
+        text-align: center; 
+    }
+    #Features { 
+        justify-content: space-between;
+        flex-direction: column; 
+        gap: 10px;  
+    }
+    .feature {
+        align-items: center; 
+        gap: 14px;
+        text-align: center; 
+        padding: 5%; 
+    }
+    .feature img {
+        width: 60px;   
+    }
+    #how-we-work-section {
+        background: url(images/bg-pattern-how-we-work-mobile.svg),hsl(256, 26%, 20%);
+        background-repeat: no-repeat; 
+        background-position: top right;  
+        flex-direction: column; 
+        text-align: center; 
+        margin: 0 5% 15%;  
+        padding: 8% 4%;  
+        gap: 30px;  
+    }
+    #how-we-work-section h2 {
+        font-size: 2.2rem;
+        line-height: 2.5rem;  
+    }
+    footer {
+        padding: 2% 4%;
+        background: url(images/bg-pattern-footer-mobile.svg), hsl(0, 0%, 98%);
+        background-repeat: no-repeat; 
+        background-position: top left;
+    }
+    footer > div:first-child {
+        flex-direction: column; 
+        padding: 18px 0; 
+        gap: 30px;    
+    }
+    #social-media {
+        gap: 18px;
+    }
+    #footer-grid {
+        grid-auto-flow: row;  
+        justify-content: center; 
+        gap: 30px; 
+    }
+    #footer-grid div {
+        width: 100%; 
+        align-items: center; 
+        gap: 10px;
+    }
+    .link-header {
+        margin: 0 0 10px;
+    }
+}
