@@ -321,11 +321,12 @@ footer > div:first-child {
 @media screen and (max-width: 520px) {
     header {
         padding: 4% 8%;    
+        height: 60px; 
         background: white; 
     }
     nav {
         position: absolute; 
-        top: 5.5%;                    
+        top: 60px;                     
         left: 0;
         z-index: 10; 
         flex-direction: column; 
